@@ -60,10 +60,10 @@ echo -------------------
 echo Namespace A: node1
 echo ip address: $first_addr
 echo ip netns exec node1 ping $last_addr
-echo ip netns exec node1 tcpdump icmp -s 65535 -w A.dump
+echo ip netns exec node1 tcpdump icmp -w A.dump
 echo -------------------
 echo "Namespace B: node$N"
 echo ip address: $last_addr
 echo ip netns exec node$N ping $first_addr
-echo ip netns exec node$N tcpdump icmp -s 65535 -w B.dump
+echo ip netns exec node$N tcpdump icmp -w B.dump
 
